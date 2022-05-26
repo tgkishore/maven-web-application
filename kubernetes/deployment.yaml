@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecsdemo-nodejs
+  name: maven-app
   labels:
     app: ecsdemo-nodejs
   namespace: default
@@ -23,7 +23,7 @@ spec:
       containers:
       - image: brentley/ecsdemo-nodejs:latest
         imagePullPolicy: Always
-        name: ecsdemo-nodejs
+        name: maven-app
         ports:
-        - containerPort: 3000
+        - containerPort: 3005
           protocol: TCP
