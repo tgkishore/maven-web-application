@@ -27,3 +27,15 @@ spec:
         ports:
         - containerPort: 3005
           protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: maven-svc
+spec:
+  selector:
+    app: ecsdemo-nodejs
+  ports:
+   -  protocol: TCP
+      port: 80
+      targetPort: 3005
