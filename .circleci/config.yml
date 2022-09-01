@@ -26,6 +26,7 @@ jobs:
       - run:
           name: Build
           command: mvn -B -DskipTests clean package
+            docker build -t circlecitest .         
       # Then run your tests!
       - run:
           name: Test
@@ -38,3 +39,4 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
+      
