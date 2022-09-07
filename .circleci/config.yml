@@ -21,8 +21,8 @@ jobs:
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Build
-          command: mvn -B -DskipTests clean package
-            docker build -t circleci .
+          #command: mvn -B -DskipTests clean package
+          command: docker build -t circleci .
       - run:
           name: Test
           command: mvn test
