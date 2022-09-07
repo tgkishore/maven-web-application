@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Build
           command: mvn -B -DskipTests clean package
-          #  docker build -t circleci .
+            docker build -t circleci .
       - run:
           name: Test
           command: mvn test
