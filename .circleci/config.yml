@@ -13,7 +13,7 @@ jobs:
          # docker run -d --name db company/proprietary-db:1.2.3
 
      # build the application image
-     - run: mvn clean package
+     - run: mvn -B -DskipTests clean package 
      - run: docker login -u gopitgk -p dckr_pat_8jeJGKuvH_6RPgWaCdzd08Dex2k
      - run: docker build -t gopitgk/circleci-test .
 
