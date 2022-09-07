@@ -13,7 +13,8 @@ jobs:
          # docker run -d --name db company/proprietary-db:1.2.3
 
      # build the application image
-     - run: docker build -t circleci .
+     - run: docker build -t gopitgk/circleci-test .
 
      # deploy the image
-     - run: docker push company/app:$CIRCLE_BRANCH
+     - run: docker login -u gopitgk -p dckr_pat_8jeJGKuvH_6RPgWaCdzd08Dex2k
+     - run: docker push gopitgk/circleci-test
